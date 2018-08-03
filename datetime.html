@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date and time</title>
+</head>
+<body>
+
+	<div id="curdate"></div>
+	<div id="curtime"></div>
+	<script type="text/javascript">
+		
+		//making object
+		var date, day, year, month, d;
+		d= new Date();
+		date= d.getDate();
+		day= d.getDay();
+		year= d.getFullYear();
+		month= d.getMonth();
+		
+
+
+			switch ( day)
+			{
+				case 0:
+				day="sunday";
+				break;
+				case 1:
+				day="monday";
+				break;
+				case 2:
+				day="tuesday";
+				break;
+				case 3:
+				day="wednesday";
+				break;
+				case 4:
+				day="thrusday";
+				break;
+				case 5:
+				day="friday";
+				break;
+				case 6:
+				day="saturday"
+				break;
+				
+			}
+
+			switch(month)
+			{
+				case 0:
+				month="january";
+				break;
+				case 1:
+				month="february";
+				break;
+				case 2:
+				month="march";
+				break;
+				case 3:
+				month="april";
+				break;
+				case 4:
+				month="may";
+				break;
+				case 5:
+				month="june";
+				break;
+				case 6:
+				month="july";
+				break;
+				case 7:
+				month="august";
+				break;
+				case 8:
+				month="september";
+				break;
+				case 9:
+				month="october";
+				break;
+				case 10:
+				month="november";
+				break;
+				case 11:
+				month="december";
+				break;
+			}
+
+			document.getElementById('curdate').
+			innerHTML=day+", "+date+" "+month+", "+year;
+
+			var minute,seconds ,hour, t;
+
+			refTime=setInterval(curtime,1000);
+
+			function curtime()
+			{
+			t= new Date();
+			hour=t.getHours();
+			minute=t.getMinutes();
+			seconds=t.getSeconds();
+
+			document.getElementById('curtime').
+			innerHTML="TIME"+" :"+hour+":"+minute+":"+seconds;
+		}
+	</script>
+
+</body>
+</html>
